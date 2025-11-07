@@ -5,16 +5,26 @@ import { images } from './images.js';
 
 const galleryEl = document.querySelector('.gallery');
 
-const markup = images.map(({ preview, original, description }) => `
+const markup = images
+.map(
+    ({ preview, original, description }) => `
     <li class="gallery-item">
         <a class="gallery-link" href="${original}">
-            <img class="gallery-image" src="${preview}" alt="${description}" />
+            <img
+                class="gallery-image"
+                src="${preview}"
+                alt="${description}"
+                loading="lazy"
+                width="480"
+                height="320"
+            />
         </a>
     </li>
-`).join('');
+`
+)
+.join('');
 
 galleryEl.innerHTML = markup;
-
 
 const lightbox = new SimpleLightbox('.gallery a', {
     captions: true,
@@ -22,4 +32,5 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captionPosition: 'bottom',
     captionDelay: 250,
 });
+
 

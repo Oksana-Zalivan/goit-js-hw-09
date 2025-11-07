@@ -25,6 +25,11 @@ body {
   background: #fafafa;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .page {
   max-width: 1200px;
   margin: 0 auto;
@@ -95,9 +100,19 @@ body {
   outline-offset: 2px;
 }
 
-.basicLightbox--visible .basicLightbox__placeholder img {
-  max-width: 92vw;
-  max-height: 92vh;
-  border-radius: 0;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
+body .sl-overlay {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+body .sl-wrapper {
+  z-index: 9999;
+}
+
+body .sl-wrapper .sl-image img {
+  max-width: calc(100vw - 80px);
+  max-height: calc(100vh - 160px);
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
