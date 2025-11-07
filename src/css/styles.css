@@ -25,6 +25,8 @@ body {
   background: #fafafa;
 }
 
+
+/* ===== ГАЛЕРЕЯ ===== */
 html,
 body {
   overflow-x: hidden;
@@ -115,4 +117,88 @@ body .sl-wrapper .sl-image img {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+
+/* ===== ФОРМА ЗВОРОТНОГО ЗВʼЯЗКУ ===== */
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Roboto", sans-serif;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: #2e2f42;
+  font-weight: 500;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  margin-top: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #4e75ff;
+  box-shadow: 0 0 0 2px rgba(78, 117, 255, 0.25);
+}
+
+.feedback-form textarea {
+  resize: none;
+}
+
+.feedback-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background: #4e75ff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.feedback-form button:hover,
+.feedback-form button:focus {
+  background: #6c8cff;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 20px;
+  color: #4e75ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #6c8cff;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e2f42;
 }
